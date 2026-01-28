@@ -8,7 +8,15 @@ wheels/
 
 # Virtual environments
 .venv
+venv/
+env/
+ENV/
+
+# Environment variables
 .env
+
+# Generated projects (optional - comment out if you want to include examples)
+generated_project/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
@@ -19,6 +27,16 @@ wheels/
 # IDEs and editors
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
 # System files
 .DS_Store
+Thumbs.db
+
+# UV lock file (optional)
+uv.lock
+
+# Python version file
+.python-version

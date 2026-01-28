@@ -8,11 +8,11 @@ class File(BaseModel):
     purpose: str = Field(description="The purpose of the file, e.g. 'main application logic', 'data processing module', etc.")
     
 class Plan(BaseModel):
-    name: str = Field(description="The name of app to be built")
-    description: str = Field(description="A oneline description of the app to be built, e.g. 'A web application for managing personal finances'")
-    techstack: str = Field(description="The tech stack to be used for the app, e.g. 'python', 'javascript', 'react', 'flask', etc.")
-    features: list[str] = Field(description="A list of features that the app should have, e.g. 'user authentication', 'data visualization', etc.")
-    files: list[File] = Field(description="A list of files to be created, each with a 'path' and 'purpose'")
+    name: str = Field(description="The name of app to be built, e.g. 'Modern Todo App'")
+    description: str = Field(description="A oneline description of the app to be built, e.g. 'A colorful todo list web application with add, delete, and mark complete features'")
+    techstack: str = Field(description="The tech stack to be used for the app, e.g. 'HTML, CSS, JavaScript' or 'Python, Flask'")
+    features: list[str] = Field(description="A list of features that the app should have, e.g. ['Add new todos', 'Delete todos', 'Mark as complete', 'Persistent storage']")
+    files: list[File] = Field(description="COMPLETE list of ALL files to be created. For web apps include: index.html, style.css, script.js or app.js. Each with a 'path' and 'purpose'")
 
 class ImplementationTask(BaseModel):
     filepath: str = Field(description="The path to the file to be modified")

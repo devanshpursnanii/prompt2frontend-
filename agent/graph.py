@@ -35,11 +35,11 @@ def architect_agent(state: dict) -> dict:
         architect_prompt(plan=plan.model_dump_json())
     )
     if resp is None:
-        raise ValueError("Planner did not return a valid response.")
+        raise ValueError("Architect did not return a valid response.")
 
     resp.plan = plan
     print(resp.model_dump_json())
-    return {"task_plan": resp}
+    return {"task_plan": resp, "plan": plan}
 
 
 def coder_agent(state: dict) -> dict:
@@ -55,12 +55,21 @@ def coder_agent(state: dict) -> dict:
     current_task = steps[coder_state.current_step_idx]
     existing_content = read_file.run(current_task.filepath)
 
+    # Get plan details for context
+    plan = state.get("plan")
+    plan_context = ""
+    if plan:
+        plan_context = f"\nProject: {plan.name}\nTech Stack: {plan.techstack}\nAll Files: {', '.join([f.path for f in plan.files])}\n"
+
     system_prompt = coder_system_prompt()
     user_prompt = (
-        f"Task: {current_task.task_description}\n"
-        f"File: {current_task.filepath}\n"
-        f"Existing content:\n{existing_content}\n"
-        "Use write_file(path, content) to save your changes."
+        f"{plan_context}\n"
+        f"CURRENT TASK ({coder_state.current_step_idx + 1}/{len(steps)}):\n"
+        f"Task: {current_task.task_description}\n\n"
+        f"File to implement: {current_task.filepath}\n"
+        f"Existing content:\n{existing_content if existing_content else '(New file - write complete content)'}\n\n"
+        f"INSTRUCTIONS: Write the COMPLETE file content with ALL functionality. "
+        f"Use write_file('{current_task.filepath}', '<COMPLETE_CODE>') to save."
     )
 
     coder_tools = [read_file, write_file, list_files, get_current_directory]
