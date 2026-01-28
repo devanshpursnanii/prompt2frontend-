@@ -1,10 +1,10 @@
-# 🎨 Prompt2Frontend - AI-Powered Web App Generator
+# Prompt2Frontend - AI-Powered Web App Generator
 
 Transform your ideas into complete, production-ready web applications with just a simple text prompt! **Prompt2Frontend** is an intelligent multi-agent system built with [LangGraph](https://github.com/langchain-ai/langgraph) that acts as your personal development team, generating fully functional web apps with HTML, CSS, and JavaScript.
 
 ---
 
-## ✨ Features
+## Features
 
 - 🤖 **Multi-Agent Architecture** - Three specialized AI agents work together to plan, architect, and code your project
 - 🎯 **Complete Code Generation** - Generates ALL necessary files (HTML, CSS, JavaScript) with no placeholders
@@ -14,21 +14,21 @@ Transform your ideas into complete, production-ready web applications with just 
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ### Three-Agent System:
 
-1. **Planner Agent** 📋
+1. **Planner Agent** 
    - Analyzes your natural language request
    - Creates a complete project specification
    - Lists ALL required files with their purposes
 
-2. **Architect Agent** 🏛️
+2. **Architect Agent** 
    - Breaks down the plan into implementation tasks
    - Specifies exact functionality for each file
    - Ensures proper integration between components
 
-3. **Coder Agent** 👨‍💻
+3. **Coder Agent** 
    - Implements each file with complete code
    - Uses tools to read/write files like a real developer
    - Produces production-ready, fully functional code
@@ -39,7 +39,7 @@ Transform your ideas into complete, production-ready web applications with just 
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Core Technologies:
 - **Python 3.11+** - Main programming language
@@ -57,7 +57,7 @@ Transform your ideas into complete, production-ready web applications with just 
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -65,7 +65,7 @@ Transform your ideas into complete, production-ready web applications with just 
 - **Groq API Key** - Get yours at [Groq Console](https://console.groq.com/keys)
 - **pip or uv** package manager
 
-### 📦 Installation
+### Installation
 
 #### Option 1: Using pip (Recommended)
 
@@ -105,7 +105,7 @@ cp .sample_env .env
 # Edit .env and add your GROQ_API_KEY
 ```
 
-### 🔑 Environment Setup
+### Environment Setup
 
 Create a `.env` file in the root directory:
 
@@ -115,7 +115,7 @@ GROQ_API_KEY=your_groq_api_key_here
 
 ---
 
-## 🎮 Usage
+## Usage
 
 ### Running the Generator
 
@@ -124,12 +124,12 @@ python3 main.py
 ```
 
 You'll be prompted to enter your project description. The system will then:
-1. 📋 Plan the complete project structure
-2. 🏛️ Break it down into implementation tasks
-3. 👨‍💻 Generate all files with complete code
-4. 💾 Save everything to `generated_project/` directory
+1. Plan the complete project structure
+2. Break it down into implementation tasks
+3. Generate all files with complete code
+4. Save everything to `generated_project/` directory
 
-### 💡 Example Prompts
+### Example Prompts
 
 **Web Applications:**
 ```
@@ -157,7 +157,7 @@ generated_project/
 
 ---
 
-## 🎯 Key Improvements
+## Key Improvements
 
 This version includes critical enhancements:
 
@@ -169,7 +169,7 @@ This version includes critical enhancements:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 prompt2frontend/
@@ -191,7 +191,7 @@ prompt2frontend/
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 **Issue: Python command not found**
 ```bash
@@ -213,7 +213,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Feel free to:
 - Report bugs
@@ -223,13 +223,13 @@ Contributions are welcome! Feel free to:
 
 ---
 
-## 📄 License
+## License
 
 This project is open source and available under the MIT License.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built with [LangChain](https://github.com/langchain-ai/langchain) and [LangGraph](https://github.com/langchain-ai/langgraph)
 - Powered by [Groq](https://groq.com/) for fast LLM inference
@@ -237,7 +237,7 @@ This project is open source and available under the MIT License.
 
 ---
 
-## 📧 Contact
+## Contact
 
 **Devansh Pursnani**  
 GitHub: [@devanshpursnanii](https://github.com/devanshpursnanii)
